@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centsible: Student Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Centsible: Student Budget Tracker</h1>
+    </header>
+    <main>
+        <!-- User Input Section -->
+        <section id="input-section">
+            <h2>Set Your Budget</h2>
+            <form id="budget-form">
+                <label for="allowance">Allowance (Monthly/Weekly):</label>
+                <input type="number" id="allowance" placeholder="Enter your allowance" required>
+                <label for="savings-goal">Savings Goal:</label>
+                <input type="number" id="savings-goal" placeholder="Set your savings goal" required>
+                <button type="submit">Set Budget</button>
+            </form>
+        </section>
+
+        <!-- Expense Logging Section -->
+        <section id="expense-logging">
+            <h2>Log Your Expenses</h2>
+            <form id="expense-form">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="food">Food</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="school works">School Works</option>
+                    <option value="trips">Trips</option>
+                    <option value="events">Events</option>
+                </select>
+                <label for="type">Type:</label>
+                <select id="type" required>
+                    <option value="needs">Needs</option>
+                    <option value="wants">Wants</option>
+                </select>
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                <button type="submit">Log Expense</button>
+            </form>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div id="summary">
+                <p>Total Income: <span id="total-income">0</span></p>
+                <p>Total Expenses: <span id="total-expenses">0</span></p>
+                <p>Savings Goal Progress: <span id="goal-progress">0%</span></p>
+            </div>
+            <div id="tips">
+                <h3>Financial Tips</h3>
+                <p id="tip-message">Track your expenses to discover opportunities to save more!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Centsible. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
